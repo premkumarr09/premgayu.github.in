@@ -1,0 +1,8 @@
+SELECT post.PID, post.ANAME, post.TIME, post.PCATEGORY, post.PTITLE, post.PIMG, post.PCONTENT,
+					comments.COMMENT, comments.PID, comments.COTIME, comments.UID,
+					users.UID, users.FNAME
+					FROM post INNER JOIN comments on comments.PID=post.PID
+					INNER JOIN users on users.UID=comments.UID; 
+					
+					
+					post view;;;
